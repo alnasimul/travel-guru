@@ -1,0 +1,39 @@
+.single-place .active  {
+    border: 6px solid #fbbc04;
+    border-radius: 26px;
+    transition: 0.1s;
+  }
+.single-place {
+    position: relative;
+    z-index: 1;
+    margin: 10px;
+    display: inline-block;
+    border: 3px solid transparent;
+    border-radius: 26px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+.single-place h3 {
+    position: absolute;
+    bottom: -8px;
+    width: 100%;
+    background: linear-gradient(0deg, #000000e0, #fff0);
+    height: 50%;
+    color: #fff;
+    text-align: left;
+    border-radius: 20px;
+    padding: 30px;
+    font-family: 'Bebas Neue', cursive;
+  }
+  
+.single-place h3 span {
+    bottom: 15%;
+    left: 15%;
+    position: absolute;
+  }
+
+.single-place img{
+      height:400px !important;
+      width: 300px !important;
+  }

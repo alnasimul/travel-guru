@@ -1,0 +1,16 @@
+.aboutPlace{
+    background-color: none !important;
+    margin-top: 90px;
+}
+
+.aboutPlace h1{
+    color: #fff;
+    font-size: 70px;
+    text-align: justify;
+}
+
+.aboutPlace p{
+    color: #fff;
+    font-weight: 500;
+    text-align: justify;
+}

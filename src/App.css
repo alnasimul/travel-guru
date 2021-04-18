@@ -1,5 +1,24 @@
 .App {
   text-align: center;
+  background: url('../src/Image/Rectangle\ 1.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+#HeroArea {
+  position: relative;
+  z-index: 1;
+}
+#HeroArea:before {
+  content: "";
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  opacity: .7;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
 .App-logo {

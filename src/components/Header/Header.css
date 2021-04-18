@@ -1,0 +1,38 @@
+/* .logo{
+    left: 120px;
+    top:20px;
+    position: absolute;
+} */
+
+/* .navBarSearchForm {
+    margin: 0 auto;
+    position: absolute;
+    top:45px;
+    left:600px;
+    
+  } 
+*/
+.searchBox{
+    width: 28% !important;
+    height: 30px;
+    position: absolute;
+    left: 320px;
+    border-radius: 5px;
+    border: 1px solid gray;
+} 
+
+.navbar-nav{
+    position: absolute;
+    right:0px;
+    top: 45px;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 300  !important;
+ }
+
+.nav-link:hover{
+    color: rgb(213 209 209) !important;
+    font-weight: 500  !important;
+ }
