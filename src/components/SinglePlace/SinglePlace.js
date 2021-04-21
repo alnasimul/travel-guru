@@ -12,6 +12,7 @@ const SinglePlace = (props) => {
                 <span> {placeName} </span>
             </h3>
         </div>
+   
     );
 };
 

@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
-import Slider from 'react-slick';
+import { Button, Col, Row } from 'react-bootstrap';
 import SinglePlace from '../SinglePlace/SinglePlace'
 import travelData from '../../fakeData/travelData';
 import PlaceDescription from '../PlaceDescription/PlaceDescription';
-
-//import PlaceDescription from '../PlaceDescription/PlaceDescription';
-import './Home.css'
+import './Home.css';
+import Slider from "react-slick";
 
 
 const Home = () => {
-    const [locations, setLocations] = useState([])
+    const [locations, setLocations] = useState([]);
     useEffect(() => {
         const loadedLocations = travelData;
         setLocations(loadedLocations);
-        // console.log(locations);
     }, [])
     const [loadedLocation, setLoadedLocations] = useState({});
 
@@ -22,27 +19,19 @@ const Home = () => {
         const selectedLocation = locations.find(singleLocation => location.key === singleLocation.key);
         setLoadedLocations(selectedLocation);
     }
-    //console.log(locations);
-    // const settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     accessibility: false,
-    //     navText: false,
-    //   };
-
+   
     const settings = {
-        dots: true,
+        dots: false,
+        arrows:true,
+        centerMode: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        accessibility: false,
-        navText: false,
-      };
-      
+        className: 'slides',
+        autoplay:true,
+    };
+
     return (
         <div style={{ overflow: 'hidden', marginLeft: '80px' }}>
             <Row>
@@ -52,17 +41,18 @@ const Home = () => {
                         marginTop: '0',
                     }}>
                         <PlaceDescription
-                            title={ loadedLocation.key ? loadedLocation.placeName : 'Sajek Valley' }
-                            shortDescription={ loadedLocation.key ? 
-                                loadedLocation.shortDescp 
+                            title={loadedLocation.key ? loadedLocation.placeName : 'Sajek Valley'}
+                            shortDescription={loadedLocation.key ?
+                                loadedLocation.shortDescp
                                 : 'The name of Sajek Valley came from the Sajek River that originates from Karnafuli river...'}
-                                key={loadedLocation.key}
-                            
+                            id={loadedLocation.key ? loadedLocation.key : "SJKS001"}
+                            key={loadedLocation.key}
+
                         >
-                        </PlaceDescription>
+                     </PlaceDescription>
                     </div>
                 </Col>
-                <Col className='left-50' md={8}>
+                <Col className='' md={8}>
                     <Slider {...settings}>
                         {locations.map((location) => (
                             <SinglePlace
@@ -76,8 +66,8 @@ const Home = () => {
                                 key={location.key}
                             ></SinglePlace>
                         ))}
-                    </Slider>
-                </Col>
+                            </Slider>
+                    </Col>
             </Row>
         </div>
 
