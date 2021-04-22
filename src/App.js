@@ -14,6 +14,7 @@ import {
 import Booking from './components/Booking/Booking';
 import Hotel from './components/Booking/Booking';
 import NotFound from './components/NotFound/NotFound';
+import FindHotel from './components/HotelInfo/FindHotel';
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
            </Route>
           <Route path="/booking/:bookingKey">
             <Booking></Booking>
+           </Route>
+           <Route path="/find_hotel">
+             <FindHotel></FindHotel>
            </Route>
           <Route path="*">
               <NotFound></NotFound>

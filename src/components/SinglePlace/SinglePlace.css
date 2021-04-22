@@ -4,9 +4,9 @@
     transition: 0.1s;
   }
 .single-place {
-    position: relative;
+    position: relative !important;
     z-index: 1;
-    margin: 10px;
+    margin: 5px;
     display: inline-block;
     border: 3px solid transparent;
     border-radius: 26px;
@@ -35,5 +35,8 @@
 
 .single-place img{
       height:400px !important;
-      width: 300px !important;
+      width: 280px !important;
   }
+.col-md-4{
+  max-width: 81% !important;
+}

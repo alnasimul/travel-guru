@@ -4,19 +4,17 @@ import { Link } from 'react-router-dom';
 import './PlaceDescription.css';
 
 const PlaceDescription = (props) => {
-    const { title, shortDescription, id } = props;
+    const { title, description, id } = props;
     console.log(props);
     return (
 
         <div className="aboutPlace">
             <h1>{title}</h1>
             <p>
-                {shortDescription}
+                {description}
             </p>
             <p>
-                <Link to={"/booking/" + id}>
-                    <Button>Booking</Button>
-                </Link>
+                {props.children}
             </p>
         </div>
 
