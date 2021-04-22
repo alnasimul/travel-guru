@@ -10,7 +10,9 @@ const Header = () => {
         <Container>
             <Navbar className="pt-4 text-primary">
                 <Navbar.Brand>
-                    <img src={logo} width="150" height="80" alt="" className="logo" />
+                    <Link to="/home">
+                        <img src={logo} width="150" height="80" alt="" className="logo" />
+                    </Link>
                 </Navbar.Brand>
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                 <Navbar.Collapse id="basic-navbar-nav">
