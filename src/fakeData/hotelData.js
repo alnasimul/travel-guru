@@ -1,6 +1,6 @@
-import star from "../Image/Rectangle26.png"
-import moon from "../Image/Rectangle27.png"
-import toon from "../Image/Rectangle28.png"
+import star from "../Image/Rectangle 26.png"
+import moon from "../Image/Rectangle 27.png"
+import toon from "../Image/Rectangle 28.png"
 
 const hotelData = [{
         "name": "Light bright airy stylish apt & safe peaceful stay",

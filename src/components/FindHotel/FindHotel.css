@@ -1,0 +1,93 @@
+h1{
+    text-align: center;
+    color:#fff
+}
+.findHotelContainer{
+    background-color: #fff !important;
+    padding: 20px;
+    border-radius: 10px;
+;
+}
+.hotelDetails {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .hotel-description h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .hotel-description {
+    width: 91%;
+  }
+  .hotel-specif {
+    font-size: 12px !important;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 3px #000000cf;
+    margin-bottom: 18px !important;
+  }
+  
+  .hotel-description p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #6a6a6a;
+  }
+  
+  .space-between {
+    margin-top: 20px !important;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  span.rating {
+    font-weight: 600;
+    color: #000;
+  }
+  
+  span.rating svg {
+    fill: #f9a51a;
+  }
+  
+  span.pricing strong {
+    color: #000;
+    font-size: 15px !important;
+    font-weight: 700;
+  }
+  
+  span.pricing {
+    font-weight: 300;
+  }
+  
+  span.tota-pi {
+    font-size: 11px;
+    margin-left: 7px;
+    opacity: 0.8;
+  }
+  
+  .location-meta p {
+    margin-bottom: 0px;
+    color: #464646;
+    font-size: 14px;
+  }
+  
+  .location-meta h3 {
+    font-weight: 700;
+    font-size: 26px;
+  }
+  
+  .location-meta {
+    margin-bottom: 24px;
+  }
+  
+  .mapStyler {
+    width: 100%;
+    height: 95%;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: 21px;
+  }

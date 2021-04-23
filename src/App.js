@@ -14,7 +14,7 @@ import {
 import Booking from './components/Booking/Booking';
 import Hotel from './components/Booking/Booking';
 import NotFound from './components/NotFound/NotFound';
-import FindHotel from './components/HotelInfo/FindHotel';
+import FindHotel from './components/FindHotel/FindHotel';
 
 
 function App() {
