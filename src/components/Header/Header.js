@@ -21,7 +21,7 @@ const Header = () => {
                     </Form>
                     <Nav className="m-auto">
                         <Nav.Link className="px-4 ">News</Nav.Link>
-                        <Nav.Link className="px-4">Destination</Nav.Link>
+                         <Nav.Link className="px-4" >Destination</Nav.Link>
                         <Nav.Link className="px-4">Blog</Nav.Link>
                         <Nav.Link className="px-4">Contact</Nav.Link>
                         <Nav.Link className="px-4">Login</Nav.Link>
