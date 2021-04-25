@@ -42,10 +42,17 @@ const Login = () => {
     }
 
     const signOut = () => {
-        handleSignOut
-            .then(res => {
-                handelResponse(res, false)
-            })
+        handleSignOut()
+        const signedOutUser = {
+            isSignedIn: false,
+            name: '',
+            email: '',
+            photo: '',
+            error: '',
+            success: false
+        }
+        handelResponse(signedOutUser, false)
+        console.log("logged out successfully")
     }
 
     const handleChange = (e) => {
@@ -97,7 +104,11 @@ const Login = () => {
         <Container>
             <Row className="justify-content-center">
                 <Col md={7}>
-                    <div className="login-form">
+                    {loggedInUser.email ? 
+                    <div className="signOut">
+                         <Button onClick={signOut}>Sign Out</Button>
+                    </div>
+                     : <div className="login-form">
                         <h4>{newUser ? 'Create an account' : 'Login'}</h4>
                         <Form onSubmit={handleSubmit}>
                             {newUser &&
@@ -108,7 +119,7 @@ const Login = () => {
                             }
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" required onBlur={handleChange} />
+                                <Form.Control type="email" placeholder="Enter email" name="email" required onBlur={handleChange} />
                                 <Form.Text className="text-muted">
                                     We'll never share your email with anyone else.
                                 </Form.Text>
@@ -116,7 +127,7 @@ const Login = () => {
 
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password" required onBlur={handleChange} />
+                                <Form.Control type="password" placeholder="Password" name="password" required onBlur={handleChange} />
                             </Form.Group>
 
                             <Form.Group controlId="formBasicSubmit">
@@ -130,17 +141,14 @@ const Login = () => {
                         {user.error && <p style={{ color: 'red' }}>{user.error}</p>}
                         {user.success && <p style={{ color: 'green' }}>User {newUser ? 'Created' : 'Logged in'} Successfully</p>}
                         <hr />
-                        <div>
+                        <div className="or">
                             <h5>Or</h5>
                         </div>
-                        {
-                            loggedInUser.email ?
-                                <Button onClick={signOut}>Sign Out</Button>
-                                : <div className="google-sign-in mt-2" onClick={googleSignIn}>
-                                 <span> <img className="google" src={g} alt="google" /> Continue with google </span>
-                                </div>
-                        }
-                    </div>
+                        <div className="google-sign-in mt-2" onClick={googleSignIn}>
+                            <span> <img className="google" src={g} alt="google" /> Continue with google </span>
+                        </div>
+                    </div>}
+
                 </Col>
             </Row>
         </Container>

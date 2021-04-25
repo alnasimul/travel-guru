@@ -25,20 +25,17 @@ const Header = () => {
                         <FormControl type="text" placeholder="Search your Destination..." className="searchBox" />
                     </Form>
                     <Nav className="m-auto">
-                        <Nav.Link className="px-4 ">News</Nav.Link>
-                        <Nav.Link className="px-4" >Destination</Nav.Link>
+                        <Link className="px-4 nav-link" to="/booking/SJKS001" >Destination</Link>
                         <Nav.Link className="px-4">Blog</Nav.Link>
-                        <Nav.Link className="px-4">Contact</Nav.Link>
-
                         {
-                            loggedInUser.email ? <p className="userName">{loggedInUser.name}</p> :  <Link to="/login" className="px-4 nav-link btnLogin">
+                            loggedInUser.email ? <p className="userName">{loggedInUser.email}</p> :  <Link to="/login" className="px-4 nav-link btnLogin">
                              Login
                          </Link>
                         }
 
-                        {/* {
-                            loggedInUser &&  <Link className="px-4 nav-link" to="/login" >Sign Out</Link>
-                        } */}
+                        {
+                            loggedInUser.email &&  <Link className="px-4 nav-link" to="/login" >Sign Out</Link>
+                        } 
                        
                      </Nav>
                 </Navbar.Collapse>

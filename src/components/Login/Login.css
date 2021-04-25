@@ -15,7 +15,7 @@
     border-radius: 10px;
     width:  45%;
     cursor: pointer;
-    margin-top: 25px;
+    margin-top: 25px !important;
 }
 
 .google-sign-in:hover{
@@ -26,7 +26,10 @@
     border-radius: 10px;
     width:  45%;
     cursor: pointer;
-    margin-top: 25px;
+}
+.or{
+    margin-bottom: 25px;
+    margin-left: 2px;
 }
 
 .google-sign-in span{
@@ -39,3 +42,16 @@
     margin-right: 5px;
     position: relative;
 }
+
+.signOut{
+    text-align: center;
+    margin-top: 200px;
+}
+
+.signOut .btn-primary {
+    color: black !important;
+    background-color: #fff !important;
+    border:none !important;
+    width: 300px !important;
+}
+
