@@ -1,11 +1,16 @@
-import React from 'react';
+
+import React, { useContext } from 'react';
 import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
+import signOut from '../Login/Login';
 import logo from '../../logo-white.png'
 import './Header.css'
+import { handleSignOut } from '../Login/loginManager';
 
 const Header = () => {
-    // const location = useLocation();
+    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+  
     return (
         <Container>
             <Navbar className="pt-4 text-primary">
@@ -21,11 +26,21 @@ const Header = () => {
                     </Form>
                     <Nav className="m-auto">
                         <Nav.Link className="px-4 ">News</Nav.Link>
-                         <Nav.Link className="px-4" >Destination</Nav.Link>
+                        <Nav.Link className="px-4" >Destination</Nav.Link>
                         <Nav.Link className="px-4">Blog</Nav.Link>
                         <Nav.Link className="px-4">Contact</Nav.Link>
-                        <Nav.Link className="px-4">Login</Nav.Link>
-                    </Nav>
+
+                        {
+                            loggedInUser.email ? <p className="userName">{loggedInUser.name}</p> :  <Link to="/login" className="px-4 nav-link btnLogin">
+                             Login
+                         </Link>
+                        }
+
+                        {/* {
+                            loggedInUser &&  <Link className="px-4 nav-link" to="/login" >Sign Out</Link>
+                        } */}
+                       
+                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
         </Container>

@@ -1,0 +1,41 @@
+.login-form{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.login-form h4{
+    text-align: center;
+}
+
+.google-sign-in{
+    border: 1px solid gray;
+    padding:10px;
+    border-radius: 10px;
+    width:  45%;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.google-sign-in:hover{
+    border: 1px solid gray;
+    background-color:lightgray;
+    color:red;
+    padding:10px;
+    border-radius: 10px;
+    width:  45%;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.google-sign-in span{
+    margin:5px;
+}
+
+.google{
+    width:20px;
+    margin-bottom: 4px;
+    margin-right: 5px;
+    position: relative;
+}
